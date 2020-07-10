@@ -4,9 +4,10 @@ Small plugin to create WordPress admin users
 Usage:
 
 1. Create a directory named /mu-plugins/ inside the /wp-content directory of your WP website.
-2. Upload the create-wpadmin.php file to this directory.
-3. Refresh the login page, or go to it. 
-4. You´ve received an e-mail with a password reset for your new account.
+2. Update the create-wpadmin.php file with username and e-mailadress you want to use.
+3. Upload the create-wpadmin.php file to this directory.
+4. Refresh any page on the site.
+5. You´ve received an e-mail with a password reset for your new account.
 
 # Changelog
 
