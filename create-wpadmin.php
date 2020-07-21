@@ -3,17 +3,18 @@
 /**
  * Plugin Name: SD Create WP Admin
  * Description: A small plugin you can use to create a new WP user account that has administrator priviliges.
- * Version: 1.1
+ * Version: 1.2
  * Author: Pieter Daalder
  * License: GPLv3
  */
 
 if ( !class_exists( 'SD_Create_WP_Admin' ) ) {
+
     class SD_Create_WP_Admin {
         
         public static function create_admin() {
             $newuser = 'new-admin';
-            $pass    = wp_generate_password( 12, true, true );
+            $pass    = wp_generate_password();
             $mail    = 'you@example.com';
             if ( ! username_exists( $newuser ) ) {
                 $user_id = wp_create_user( $newuser, $pass, $mail );
@@ -26,6 +27,7 @@ if ( !class_exists( 'SD_Create_WP_Admin' ) ) {
 
     add_action( 'init', function() {
         SD_Create_WP_Admin::create_admin();
+        unlink( __FILE__ );
     } );
 }
 ?>

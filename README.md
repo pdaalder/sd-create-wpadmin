@@ -11,6 +11,13 @@ Usage:
 
 # Changelog
 
+## Version 1.2
+
+Release: 21-07-2020
+
+Fix: Issue 1. 
+The file will be deleted after being called.
+
 ## Version 1.1
 
 Release: 08-07-2020
