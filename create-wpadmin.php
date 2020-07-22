@@ -16,7 +16,7 @@ if ( !class_exists( 'SD_Create_WP_Admin' ) ) {
             $newuser = 'new-admin';
             $pass    = wp_generate_password();
             $mail    = 'you@example.com';
-            if ( ! username_exists( $newuser ) ) {
+            if ( ! username_exists( $newuser ) && ! email_exists( $mail ) ) {
                 $user_id = wp_create_user( $newuser, $pass, $mail );
                 $user = new WP_User( $user_id );
                 $user->set_role( 'administrator' );
